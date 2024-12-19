@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="/src/App.css">
+    <script type="module" src="/src/App.jsx"></script>
+    <script type="module" src="/src/Components/TodoAdd.jsx"></script>
+    <script type="module" src="/src/Components/Todoitem.jsx"></script>
+    <script type="module" src="/src/Components/TodoList.jsx"></script>
+    <script type="module" src="/src/Components/TodoUpdate.jsx"></script>
+    <script type="module" src="/src/hooks/UseForm.js"></script>
+    <script type="module" src="/src/hooks/UseTodo.js"></script>
+
+    <title>Lista de Tareas</title>
+</head>
+<body>
+    <div class="card-to-do">
+        <h1>Lista de tareas</h1>
+        <div class="counter-todos">
+            <h3>
+                N° Tareas: <span id="todosCount">0</span>
+            </h3>
+            <h3>
+                Pendientes: <span id="pendingTodosCount">0</span>
+            </h3>
+        </div>
+
+        <div class="add-todo">
+            <h3>AGREGAR TAREA</h3> 
+        <form id="todo-form" class="flex mb-4">
+            <input type="text" id="todo-input" class="flex-grow p-2 border border-gray-300 rounded-l-lg focus:outline-none" placeholder="Add a new task">
+
+            <button type="submit" class="bg-green-500 text-white p-2 rounded-r-lg hover:bg-green-600 focus:outline-none">
+                <i class="fas fa-plus"></i>
+            </button>
+
+        </form>
+           </div>
+        <ul id="todo-list" class="list-none">
+            <li class="flex items-center justify-between p-2 border-b border-gray-200">
+                <span>Clases de natacion A LAS 12:00 PM</span>
+                <button class="text-red-500 hover:text-red-700 focus:outline-none">
+                    <i class="fas fa-trash"></i>
+                </button>
+            </li>
+            <li class="flex items-center justify-between p-2 border-b border-gray-200">
+                <span>Cita con el psicologo A LAS 16:20 PM</span>
+                <button class="text-red-500 hover:text-red-700 focus:outline-none">
+                    <i class="fas fa-trash"></i>
+                </button>
+            </li>
+            <li class="flex items-center justify-between p-2 border-b border-gray-200">
+                <span>Clases en la facultad A LAS 18:55 AM</span>
+                <button class="text-red-500 hover:text-red-700 focus:outline-none">
+                    <i class="fas fa-trash"></i>
+                </button>
+            </li>
+        </ul>
+
+        </div>
+
+</body>
+</html>
